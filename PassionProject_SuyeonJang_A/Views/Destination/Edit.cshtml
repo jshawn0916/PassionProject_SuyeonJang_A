@@ -1,0 +1,35 @@
+﻿@model PassionProject_SuyeonJang_A.Models.ViewModels.UpdateDestination
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Destination</h2>
+<form action="/Destination/Update/@Model.SelectedDestination.DestinationId" method="POST">
+    <div style="display:none;">
+        @* Pass through the Destination ID *@
+        <input type="text" name="DestinationId" value="@Model.SelectedDestination.DestinationId" />
+    </div>
+    <div>
+        <label>Name:</label> <input type="text" name="DestinationName" value="@Model.SelectedDestination.DestinationName" />
+    </div>
+    <div>
+        <label> Category:</label>
+        <select name="DestinationCategory" value="@Model.SelectedDestination.DestinationCategory">
+            <option value="Attraction">Attraction</option>
+            <option value="Market">Market</option>
+            <option value="Museum">Museum</option>
+            <option value="Beach">Beach</option>
+            <option value="National Park">National Park</option>
+            <option value="Historical Site">Historical Site</option>
+            <option value="Festival">Festival</option>
+        </select>
+    </div>
+    <div>
+        <label> Location:</label> <input type="text" name="DestinationLocation" value="@Model.SelectedDestination.DestinationLocation" />
+    </div>
+    <div>
+        <input type="submit" value="Update Destination" />
+
+    </div>
+</form>

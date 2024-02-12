@@ -1,0 +1,20 @@
+﻿@model PassionProject_SuyeonJang_A.Models.JourneysDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Journey</h2>
+<form action="/Journey/Update/@Model.JourneyId" method="POST">
+    <div style="display:none;">
+        @* Pass through the Journey ID *@
+        <input type="text" name="JourneyId" value="@Model.JourneyId" />
+    </div>
+    <div>
+        <label>Name:</label> <input type="text" name="SpeciesName" value="@Model.JourneyTitle" />
+    </div>
+    <div>
+        <input type="submit" value="Update Journey" />
+
+    </div>
+</form>

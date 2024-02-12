@@ -1,0 +1,23 @@
+﻿@model PassionProject_SuyeonJang_A.Models.ViewModels.DetailsJourney
+
+
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Journey/List">Go back to list</a>
+<br />
+<a href="/Journey/Edit/@Model.SelectedJourneys.JourneyId">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Journey/DeleteConfirm/@Model.SelectedJourneys.JourneyId">Delete</a>
+<h2>@Model.SelectedJourneys.JourneyTitle</h2>
+
+
+<div style="margin-top:100px;">
+    <h3>Destinations related to this Journey</h3>
+    @foreach (var destination in Model.RelatedDestinations)
+    {
+        <a href="/Destination/Details/@destination.DestinationId">@destination.DestinationName</a>
+
+    }
+</div>

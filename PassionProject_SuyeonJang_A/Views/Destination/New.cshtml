@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PassionProject_SuyeonJang_A.Models.DestinationDto>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Destination</h2>
+<form action="/Destination/Create" method="POST">
+    <div>
+        <label>Name:</label> <input type="text" name="DestinationName" />
+    </div>
+    <div>
+        <label> Category:</label>
+        <select name="DestinationCategory">
+            <option value="Attraction">Attraction</option>
+            <option value="Market">Market</option>
+            <option value="Museum">Museum</option>
+            <option value="Beach">Beach</option>
+            <option value="National Park">National Park</option>
+            <option value="Historical Site">Historical Site</option>
+            <option value="Festival">Festival</option>
+        </select>
+    </div>
+    <div>
+        <label> Location:</label> <input type="text" name="DestinationLocation" />
+    </div>
+    <div>
+        <input type="submit" value="Add Destination" />
+
+    </div>
+</form>
+

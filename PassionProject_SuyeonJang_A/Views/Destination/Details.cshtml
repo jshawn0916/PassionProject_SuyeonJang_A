@@ -1,0 +1,12 @@
+﻿@model PassionProject_SuyeonJang_A.Models.ViewModels.DetailsDestination
+@{
+    ViewBag.Title = "Detail";
+}
+<a href="/Destination/List">Go back to list</a>
+<br />
+<a href="/Destination/Edit/@Model.SelectedDestination.DestinationId">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Destination/DeleteConfirm/@Model.SelectedDestination.DestinationId">Delete</a>
+<h2>Name : @Model.SelectedDestination.DestinationName</h2>
+<div>Category : @Model.SelectedDestination.DestinationCategory</div>
+<div>Location : @Model.SelectedDestination.DestinationLocation</div>

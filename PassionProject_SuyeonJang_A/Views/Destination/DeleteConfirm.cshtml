@@ -1,0 +1,14 @@
+﻿@model PassionProject_SuyeonJang_A.Models.DestinationDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this destination?</h2>
+<a href="/Destination/List">Cancel</a>
+<h2>@Model.DestinationName</h2>
+<div>journeys: @Model.JourneyTitle</div>
+<form action="/Destination/Delete/@Model.DestinationId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+
+</form>

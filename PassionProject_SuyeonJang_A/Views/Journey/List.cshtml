@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PassionProject_SuyeonJang_A.Models.JourneysDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Journey/New">New Journey</a>
+@foreach (var Journey in Model)
+{
+    <h2><a href="/Species/Details/@Journey.JourneyId">@Journey.JourneyTitle</a></h2>
+
+}

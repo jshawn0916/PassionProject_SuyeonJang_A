@@ -1,0 +1,11 @@
+﻿@model IEnumerable<PassionProject_SuyeonJang_A.Models.TravelerDto>
+@{
+    ViewBag.Title = "List";
+}
+<h2>List</h2>
+<a href="/Traveler/New">New Traveler</a>
+@foreach (var Traveler in Model)
+{
+    <h2><a href="/Traveler/Details/@Traveler.TravelerId">@Traveler.TravelerLastName, @Traveler.TravelerFirstName</a></h2>
+}
+

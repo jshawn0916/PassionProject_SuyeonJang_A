@@ -1,0 +1,12 @@
+﻿@model PassionProject_SuyeonJang_A.Models.TravelerDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this traveler?</h2>
+<a href="/Traveler/List">Cancel</a>
+<h3>Name: @Model.TravelerFirstName @Model.TravelerLastName</h3>
+<form action="/Traveler/Delete/@Model.TravelerId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

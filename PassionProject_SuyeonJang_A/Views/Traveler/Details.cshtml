@@ -1,0 +1,12 @@
+﻿@model PassionProject_SuyeonJang_A.Models.ViewModels.DetailsTraveler
+@{
+    ViewBag.Title = "Details";
+}
+
+<a href="/Traveler/List">Go back to list</a>
+<br />
+<a href="/Traveler/Edit/@Model.SelectedTraveler.TravelerId">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Traveler/DeleteConfirm/@Model.SelectedTraveler.TravelerId">Delete</a>
+<h2>@Model.SelectedTraveler.TravelerFirstName @Model.SelectedTraveler.TravelerLastName</h2>
+
